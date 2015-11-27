@@ -1,14 +1,31 @@
 function even_group_calculate_average(arr) {
-    var arr1 = [];
-    for(var i=0;i<arr.length;i+=2){
-            arr1.push(arr[i]);
+  var result = [];
+  var evenIndexArr = []
+  var evenArr = [];
+  for (var i = 1; i < arr.length; i += 2) {
+    evenIndexArr.push(arr[i]);
+  }
+  for (var j = 0; j < evenIndexArr.length; j++) {
+    if (evenIndexArr[j] % 2 == 0) {
+      evenArr.push(evenIndexArr[j]);
     }
-    var arr2 = [];
-    for(var j=0;j<arr1.length;j++){
-        if(arr1[j]%2==0){
-            arr2[].push(arr1[j]);
-        }
-
+  }
+  for (var k = 0; k < 10; k++) {
+    var sum = 0,
+      ave = 0;
+    for (var m = 0, n = 0; m < evenArr.length; m++) {
+      if (evenArr[m].toString().length == k) {
+        sum += evenArr[m];
+        n++;
+        ave = sum / n;
+      }
     }
-  
+    if (ave != 0) {
+      result.push(ave);
+    }
+  }
+  if (result.length == 0) {
+    result = [0];
+  }
+  return result;
 }
