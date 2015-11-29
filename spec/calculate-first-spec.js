@@ -16,6 +16,6 @@ describe('single_element_spec', function() {
 
   it('第偶数个元素中，选出不重复的元素, 我是倒霉蛋挂掉的测试', function() {
     var result = single_element(collection_pi);
-    expect(result).toEqual([9, 6]);
+    expect(result).toEqual([9, 6, 3, 4]);
   });
 });
